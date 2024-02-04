@@ -6,14 +6,14 @@ members = [
 ]
 
 [workspace.package]
-version = "0.1.0"
-authors = ["Gijs Burghoorn <me@gburghoorn.com>"]
-repository = "https://github.com/coastalwhite/wavedrom-rs"
-homepage = "https://github.com/coastalwhite/wavedrom-rs"
+version = "0.1.1"
+authors = ["Gijs Burghoorn <me@gburghoorn.com>", "Pascal Pfeiffer <pascal.pfeiffer@fraunhofer.ipms.de>"]
+repository = "https://github.com/paspf/wavedrom-rs"
+homepage = "https://github.com/paspf/wavedrom-rs"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "A Pure Rust Digital Timing Diagram Generator based on WaveDrom-JS"
-rust-version = "1.70"
+rust-version = "1.75"
 
 [workspace.dependencies]
 clap = "4.3.2"
@@ -21,9 +21,9 @@ clap = "4.3.2"
 # Config for 'cargo dist'
 [workspace.metadata.dist]
 # The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
-cargo-dist-version = "0.0.7"
+cargo-dist-version = "0.9.0"
 # The preferred Rust toolchain to use in CI (rustup toolchain syntax)
-rust-toolchain-version = "1.70"
+rust-toolchain-version = "1.75"
 # CI backends to support (see 'cargo dist generate-ci')
 ci = ["github"]
 # The installers to generate for each app
