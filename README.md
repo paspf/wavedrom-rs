@@ -7,6 +7,9 @@
 
 [Demo][demo] | [Tutorial][book]
 
+This is a fork of the original [wavedrom-rs](https://github.com/coastalwhite/wavedrom-rs/) with additional support of PNG files.
+
+
 The `wavedrom-rs` crate provides an interface to shape beautiful [Digital Timing
 Diagrams][dtd] into a [SVG][svg] or [PNG][png] file. It is almost completely compatible with the
 [WaveDrom][wavedrom-js] project. It can be merged into document build tools,
@@ -66,10 +69,10 @@ cargo +nightly fuzz run wavejson-render
 
 ## MSRV
 
-This crate currently only compiles with Rust 1.70. To select that version use:
+This crate currently only compiles with Rust 1.75. To select that version use:
 
 ```bash
-rustup update 1.70 --no-self-update && rustup default 1.70
+rustup update 1.75 --no-self-update && rustup default 1.75
 ```
 
 ## Contribution
