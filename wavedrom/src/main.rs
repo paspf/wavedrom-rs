@@ -68,10 +68,11 @@ Usage: wavedrom [FLAGS]
 Takes a wavejson file from the STDIN and outputs a SVG to the STDOUT.
 
 Flags:
--i/--input <path/to/input.json>: specify a path to a input wavejson file.
--o/--output <path/to/output.svg>: specify a path to a output svg or png file.
--s/--skin <path/to/skin.json>: specify a path to a skin file.
+-i/--input     <path/to/input.json>: specify a path to a input wavejson file.
+-o/--output    <path/to/output.svg>: specify a path to a output svg or png file.
+-s/--skin      <path/to/skin.json>: specify a path to a skin file.
 -p/--png_scale floating-point value to adjust the resolution of the output png file.
+               This flag is ignored when generating svg files. 
         "
         .trim()
     }
@@ -79,6 +80,11 @@ Flags:
     fn get() -> Result<Self, ParsingError> {
         let mut args = std::env::args().skip(1);
         let mut flags = Flags::default();
+
+        if args.size_hint().0 == 0 {
+            println!("No flags were given. Use -h or --help for assistance.");
+            std::process::exit(1);
+        }
 
         loop {
             let Some(arg) = args.next() else {
